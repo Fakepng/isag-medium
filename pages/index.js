@@ -7,8 +7,8 @@ export default function Home({ posts }) {
   return (
     <div >
       {posts.map((post, index) => (
-        <div style={{ width: "50%", margin: "20px auto" }}>
-          <Link href={'/blog/' + post.slug} passHref key={index}>
+        <div style={{ width: "50%", margin: "20px auto" }} key={index}>
+          <Link href={'/blog/' + post.slug} >
             <div key={index} style={{ border: "solid 2px black", padding: "30px" }}>
               <h5>{post.frontMatter.title}</h5>
               <p>{post.frontMatter.description}</p>
