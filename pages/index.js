@@ -2,21 +2,21 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import Link from 'next/link'
-import Image from 'next/image'
 
 export default function Home({ posts }) {
   return (
-    <div>
+    <div >
       {posts.map((post, index) => (
-        <div key={index}>
-              <h5>{post.frontMatter.title}</h5>
-              <p>{post.frontMatter.description}</p>
-              <p>
-                <small>{post.frontMatter.date}</small>
-              </p>
+        <div style={{ width: "50%", margin: "20px auto" }}>
+          <div key={index} style={{ border: "solid 2px black" , padding: "30px" }}>
+            <h5>{post.frontMatter.title}</h5>
+            <p>{post.frontMatter.description}</p>
+            <p>
+              <small>{post.frontMatter.date}</small>
+            </p>
 
-              <div >
-                {/* <Image
+            <div >
+              {/* <Image
                   src={post.frontMatter.thumbnailUrl}
                   className="img-fluid mt-1 rounded-start"
                   alt="thumbnail"
@@ -24,13 +24,13 @@ export default function Home({ posts }) {
                   height={400}
                   objectFit="cover"
                 /> */}
-              </div>
-           
-          
+            </div>
+
+          </div>
         </div>
       ))}
-
     </div>
+
   );
 }
 
