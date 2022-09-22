@@ -215,6 +215,13 @@
     "minimatch" "^3.1.2"
     "strip-json-comments" "^3.1.1"
 
+"@giscus/react@^2.2.0":
+  "integrity" "sha512-MXjKAQyO85ZdC8OVApNQsJhPvTJcuUf5GmQw2KdvNcBVivUpVrA+NUppdwsrI+lK6jEX4ZMVOCnbJ5GaQddaAA=="
+  "resolved" "https://registry.npmjs.org/@giscus/react/-/react-2.2.0.tgz"
+  "version" "2.2.0"
+  dependencies:
+    "giscus" "^1.2.0"
+
 "@humanwhocodes/config-array@^0.10.4":
   "integrity" "sha512-mXAIHxZT3Vcpg83opl1wGlVZ9xydbfZO3r5YfRSH6Gpp2J/PfdBP0wbDa2sO6/qRbcalpoevVyW6A/fI6LfeMw=="
   "resolved" "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.10.4.tgz"
@@ -286,6 +293,11 @@
   dependencies:
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
+
+"@lit/reactive-element@^1.3.0", "@lit/reactive-element@^1.4.0":
+  "integrity" "sha512-qDv4851VFSaBWzpS02cXHclo40jsbAjRXnebNXpm0uVg32kCneZPo9RYVQtrTNICtZ+1wAYHu1ZtxWSWMbKrBw=="
+  "resolved" "https://registry.npmjs.org/@lit/reactive-element/-/reactive-element-1.4.1.tgz"
+  "version" "1.4.1"
 
 "@mdx-js/loader@^2.1.3", "@mdx-js/loader@>=0.15.0":
   "integrity" "sha512-7LtklcfzZC9aWWFREop0ivemhwcp/cke2tICHEhnDyGn+hTg7LIbWCfSos68kJv9w7Z47KYfNcg9/8zBD+8eXA=="
@@ -530,6 +542,11 @@
   "integrity" "sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew=="
   "resolved" "https://registry.npmjs.org/@types/scheduler/-/scheduler-0.16.2.tgz"
   "version" "0.16.2"
+
+"@types/trusted-types@^2.0.2":
+  "integrity" "sha512-F5DIZ36YVLE+PN+Zwws4kJogq47hNgX3Nx6WyDJ3kcplxyke3XIzB8uK5n/Lpm1HBsbGzd6nmGehL8cPekP+Tg=="
+  "resolved" "https://registry.npmjs.org/@types/trusted-types/-/trusted-types-2.0.2.tgz"
+  "version" "2.0.2"
 
 "@types/unist@*", "@types/unist@^2.0.0":
   "integrity" "sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ=="
@@ -1889,6 +1906,13 @@
     "call-bind" "^1.0.2"
     "get-intrinsic" "^1.1.1"
 
+"giscus@^1.2.0":
+  "integrity" "sha512-IpfWvU0/hYbMGQKuoPlED8wWmluRYIOjtrBCnL7logsWjMpPRxiAC2pUIC0+SC0pDMOqXrk1onTYMHgwgRpRzg=="
+  "resolved" "https://registry.npmjs.org/giscus/-/giscus-1.2.0.tgz"
+  "version" "1.2.0"
+  dependencies:
+    "lit" "^2.2.8"
+
 "git-raw-commits@^2.0.0":
   "integrity" "sha512-VnctFhw+xfj8Va1xtfEqCUD2XDrbAPSJx+hSrE5K7fGdjZruW7XV+QOrN7LF/RJyvspRiD2I0asWsxFp0ya26A=="
   "resolved" "https://registry.npmjs.org/git-raw-commits/-/git-raw-commits-2.0.11.tgz"
@@ -2507,6 +2531,30 @@
   "integrity" "sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg=="
   "resolved" "https://registry.npmjs.org/lines-and-columns/-/lines-and-columns-1.2.4.tgz"
   "version" "1.2.4"
+
+"lit-element@^3.2.0":
+  "integrity" "sha512-6ZgxBR9KNroqKb6+htkyBwD90XGRiqKDHVrW/Eh0EZ+l+iC+u+v+w3/BA5NGi4nizAVHGYvQBHUDuSmLjPp7NQ=="
+  "resolved" "https://registry.npmjs.org/lit-element/-/lit-element-3.2.2.tgz"
+  "version" "3.2.2"
+  dependencies:
+    "@lit/reactive-element" "^1.3.0"
+    "lit-html" "^2.2.0"
+
+"lit-html@^2.2.0", "lit-html@^2.3.0":
+  "integrity" "sha512-FyKH6LTW6aBdkfNhNSHyZTnLgJSTe5hMk7HFtc/+DcN1w74C215q8B+Cfxc2OuIEpBNcEKxgF64qL8as30FDHA=="
+  "resolved" "https://registry.npmjs.org/lit-html/-/lit-html-2.3.1.tgz"
+  "version" "2.3.1"
+  dependencies:
+    "@types/trusted-types" "^2.0.2"
+
+"lit@^2.2.8":
+  "integrity" "sha512-TejktDR4mqG3qB32Y8Lm5Lye3c8SUehqz7qRsxe1PqGYL6me2Ef+jeQAEqh20BnnGncv4Yxy2njEIT0kzK1WCw=="
+  "resolved" "https://registry.npmjs.org/lit/-/lit-2.3.1.tgz"
+  "version" "2.3.1"
+  dependencies:
+    "@lit/reactive-element" "^1.4.0"
+    "lit-element" "^3.2.0"
+    "lit-html" "^2.3.0"
 
 "loader-runner@^4.2.0":
   "integrity" "sha512-3R/1M+yS3j5ou80Me59j7F9IMs4PXs3VqRrm0TU3AbKPxlmpoY1TNscJV/oGJXo8qCatFGTfDbY6W6ipGOYXfg=="
@@ -3519,7 +3567,7 @@
   dependencies:
     "safe-buffer" "^5.1.0"
 
-"react-dom@^17.0.2 || ^18.0.0-0", "react-dom@>=16.x <=18.x", "react-dom@18.2.0":
+"react-dom@^16 || ^17 || ^18", "react-dom@^17.0.2 || ^18.0.0-0", "react-dom@>=16.x <=18.x", "react-dom@18.2.0":
   "integrity" "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   "version" "18.2.0"
@@ -3543,7 +3591,7 @@
     "prismjs" "^1.27.0"
     "refractor" "^3.6.0"
 
-"react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^17.0.2 || ^18.0.0-0", "react@^18.2.0", "react@>= 0.14.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>=16", "react@>=16.x <=18.x", "react@18.2.0":
+"react@^16 || ^17 || ^18", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^17.0.2 || ^18.0.0-0", "react@^18.2.0", "react@>= 0.14.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>=16", "react@>=16.x <=18.x", "react@18.2.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"

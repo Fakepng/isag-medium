@@ -4,12 +4,18 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import SyntaxHighlighter from 'react-syntax-highlighter'
+import Head from 'next/head'
 
 const components = { SyntaxHighlighter }
 
 const PostPage = ({ frontMatter: { title, date }, mdxSource }) => {
   return (
     <div>
+      <Head>
+        <title>
+          {title} | ISAG
+        </title>
+      </Head>
       <h1>{title}</h1>
       <MDXRemote {...mdxSource} components={components}/>
     </div>
