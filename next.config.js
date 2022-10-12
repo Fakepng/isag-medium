@@ -8,7 +8,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  assetPrefix: isProd ? "/isag-medium/" : " ",
+  assetPrefix: isProd ? "/" : " ",
   images: {
     unoptimized: true,
   },
