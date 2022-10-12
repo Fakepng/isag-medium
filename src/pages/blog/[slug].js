@@ -6,6 +6,8 @@ import matter from 'gray-matter'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import Head from 'next/head'
 
+import Comment from '@components/Comment'
+
 const components = { SyntaxHighlighter }
 
 const PostPage = ({ frontMatter: { title, date }, mdxSource }) => {
@@ -16,8 +18,11 @@ const PostPage = ({ frontMatter: { title, date }, mdxSource }) => {
           {title} | ISAG
         </title>
       </Head>
-      <h1>{title}</h1>
+      <div className="container mx-auto">
+      <h1 className='text-4xl'>{title}</h1>
       <MDXRemote {...mdxSource} components={components}/>
+      <Comment />
+      </div>
     </div>
   )
 }

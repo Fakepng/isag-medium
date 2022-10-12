@@ -2,7 +2,6 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import Link from 'next/link'
-import Giscus from '@giscus/react';
 
 export default function Home({ posts }) {
   return (
@@ -32,24 +31,7 @@ export default function Home({ posts }) {
           </Link>
         </div>
       ))}
-
-<Giscus
-      repo="ISAG-Lab/isag-medium"
-      repoId="R_kgDOICgBqQ"
-      category="Comment"
-      categoryId="DIC_kwDOICgBqc4CRkL1"
-      mapping="url"
-      term="Welcome to @giscus/react component!"
-      reactionsEnabled="1"
-      emitMetadata="0"
-      inputPosition="top"
-      theme="light"
-      lang="en"
-      loading="lazy"
-      //crossOrigin="anonymous" 
-    />
     </div>
-
   );
 }
 
