@@ -1,18 +1,22 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import Link from "next/link";
-import Giscus from "@giscus/react";
 import Card from "../components/Card";
+import Tag from "@components/Tag";
 
 export default function Home({ posts }) {
   return (
-    <div>
-      {posts.map((post, index) => (
-        <div key={index}>
-          <Card post={post} />
-        </div>
-      ))}
+    <div className="px-20">
+      <div className="py-6">
+        <Tag />
+      </div>
+      <div className="max-w-[800px] mx-auto">
+        {posts.map((post, index) => (
+          <div key={index}>
+            <Card post={post} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

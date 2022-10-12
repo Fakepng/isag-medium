@@ -4,7 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  @apply font-['Prompt'];
+}
 
 .nav-icon {
-  @apply text-2xl my-4 text-center;
+  @apply text-2xl lg:my-8 text-center;
 }
