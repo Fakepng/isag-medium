@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@utils/*": ["src/utils/*"],
+    },
     "target": "es5",
     "lib": [
       "dom",
@@ -26,5 +31,6 @@
 , "src/scripts/generate-sitemap.js", "data/siteMetadata.js"  ],
   "exclude": [
     "node_modules"
-  ]
+  ],
+
 }
