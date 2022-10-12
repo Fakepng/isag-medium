@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 * {
-  @apply font-['Prompt'];
+  @apply font-['Prompt'] scroll-smooth;
 }
 
 .nav-icon {
