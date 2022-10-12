@@ -18,11 +18,10 @@ const PostPage = ({ frontMatter: { title, date }, mdxSource }) => {
           {title} | ISAG
         </title>
       </Head>
-      <div className="container mx-auto">
-      <h1 className='text-4xl'>{title}</h1>
-      <MDXRemote {...mdxSource} components={components}/>
-      <Comment />
-      </div>
+
+        <h1 className='text-4xl'>{title}</h1>
+        <MDXRemote {...mdxSource} components={components}/>
+        <Comment />
     </div>
   )
 }
