@@ -19,14 +19,13 @@ export default function Home({ posts }) {
 
               <div >
                 
-                {/* <img
-                  src={post.frontMatter.thumbnailUrl}
+                <img
+                  src={`/static/images/posts/${post.slug}${post.frontMatter.thumbnailUrl}`}
                   className="img-fluid mt-1 rounded-start"
                   alt="thumbnail"
                   width={500}
                   height={400}
-                  objectFit="cover"
-                /> */}
+                /> 
               </div>
 
             </div>
@@ -47,7 +46,7 @@ export default function Home({ posts }) {
       theme="light"
       lang="en"
       loading="lazy"
-      crossOrigin="anonymous"
+      //crossOrigin="anonymous" 
     />
     </div>
 
@@ -55,15 +54,17 @@ export default function Home({ posts }) {
 }
 
 export const getStaticProps = async () => {
-  const files = fs.readdirSync(path.join('posts'))
+  const files = fs.readdirSync(path.join('data/posts'))
 
   const posts = files.map(filename => {
-    const markdownWithMeta = fs.readFileSync(path.join('posts', filename), 'utf-8')
+    const markdownWithMeta = fs.readFileSync(path.join('data/posts', filename), 'utf-8')
+    
     const { data: frontMatter } = matter(markdownWithMeta)
 
     return {
       frontMatter,
-      slug: filename.split('.')[0]
+      slug: filename.split('.')[0],
+
     }
   })
 
