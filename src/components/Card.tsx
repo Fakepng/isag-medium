@@ -3,7 +3,7 @@ import Link from "next/link";
 const Card = ({ post }) => {
   return (
     <Link href={`/blog/${post.slug}`}>
-      <div className="flex dark:bg-slate-400 bg-red-100  mb-10 rounded-lg p-6 justify-between cursor-pointer">
+      <div className="flex dark:bg-slate-400 shadow-md bg-red-100  mb-10 rounded-lg p-6 justify-between cursor-pointer">
         <div className="flex flex-col justify-between pr-8">
           <div>
             <h1 className="text-xl font-semibold">{post.frontMatter.title}</h1>

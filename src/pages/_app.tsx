@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <div className="bg-sky-100 lg:basis-1/6 order-last lg:order-first">
           <Navbar />
         </div>
-        <div className="bg-green-100 lg:basis-1/2 flex-1">
+        <div className="bg-green-100 lg:basis-1/2 flex-1 px-6 lg:px-0">
           <Component {...pageProps} />
         </div>
         <div className="bg-sky-100 lg:basis-1/4 order-first lg:order-last">
