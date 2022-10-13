@@ -25,9 +25,9 @@ const Tag = () => {
   const [count, setCount] = useState<number>(0);
   const scrollElement = useRef(null);
 
-  const scrollRight = () => (scrollElement.current.scrollLeft += 50);
+  const scrollRight = () => (scrollElement.current.scrollLeft += 80);
 
-  const scrollLeft = () => (scrollElement.current.scrollLeft -= 50);
+  const scrollLeft = () => (scrollElement.current.scrollLeft -= 80);
 
   return (
     <div className="flex border-b-[1px] border-b-slate-500">
