@@ -23,17 +23,34 @@ const tagLinks = [
 
 const Tag = () => {
   const [count, setCount] = useState<number>(0);
+  const [scrollX, setScrollX] = useState<number>(0);
+  const [scrollEnd, setScrollEnd] = useState<boolean>(false);
   const scrollElement = useRef(null);
 
-  const scrollRight = () => (scrollElement.current.scrollLeft += 50);
-
-  const scrollLeft = () => (scrollElement.current.scrollLeft -= 50);
+  const scroll = (size: number) => {
+    scrollElement.current.scrollLeft += size;
+    setScrollX(scrollX + size);
+    console.log(scrollElement.current.scrollWidth);
+    if (
+      Math.floor(
+        scrollElement.current.scrollWidth -
+          scrollElement.current.scrollLeft -
+          100
+      ) <= scrollElement.current.offsetWidth
+    ) {
+      setScrollEnd(true);
+    } else {
+      setScrollEnd(false);
+    }
+  };
 
   return (
     <div className="flex border-b-[1px] border-b-slate-500">
-      <button onClick={scrollLeft}>
-        <MdOutlineKeyboardArrowLeft className="nav-icon !my-0" />
-      </button>
+      {scrollX !== 0 && (
+        <button onClick={() => scroll(-80)}>
+          <MdOutlineKeyboardArrowLeft className="nav-icon !my-0" />
+        </button>
+      )}
       <div className="overflow-hidden mx-4 flex" ref={scrollElement}>
         {tagLinks.map((tag, index) => (
           <div
@@ -47,9 +64,11 @@ const Tag = () => {
           </div>
         ))}
       </div>
-      <button onClick={scrollRight}>
-        <MdOutlineKeyboardArrowRight className="nav-icon !my-0" />
-      </button>
+      {!scrollEnd && (
+        <button onClick={() => scroll(80)}>
+          <MdOutlineKeyboardArrowRight className="nav-icon !my-0" />
+        </button>
+      )}
     </div>
   );
 };

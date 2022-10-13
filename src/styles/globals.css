@@ -9,5 +9,5 @@
 }
 
 .nav-icon {
-  @apply text-2xl lg:my-8 text-center cursor-pointer;
+  @apply text-2xl lg:my-8 text-center cursor-pointer text-black;
 }
