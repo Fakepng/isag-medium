@@ -39,7 +39,7 @@ const Tag = () => {
           <div
             onClick={() => setCount(index)}
             key={index}
-            className={`text-base whitespace-nowrap mx-4  py-1 inline-block ${
+            className={`text-base whitespace-nowrap mx-4 cursor-pointer py-1 inline-block ${
               count === index ? "border-b-2 border-b-black" : ""
             }`}
           >
