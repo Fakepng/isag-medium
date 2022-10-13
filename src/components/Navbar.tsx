@@ -8,7 +8,7 @@ export default function Navbar() {
       <div className="w-7 hidden lg:block">
         <img className="w-full" src="/static/images/logo-isag.png" alt="" />
       </div>
-      <div className="flex lg:block w-full justify-around bg-red-100">
+      <div className="flex lg:block w-full justify-around">
         <div>
           <FaHome className="nav-icon" />
         </div>
