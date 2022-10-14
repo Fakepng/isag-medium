@@ -1,4 +1,5 @@
 import Link from "next/link";
+const isProd = process.env.NODE_ENV === "production";
 
 const Card = ({ post }) => {
   return (
@@ -19,7 +20,7 @@ const Card = ({ post }) => {
         <div className="max-w-[250px]">
           <img
             className="w-full"
-            src={`/static/images/posts/${post.slug}${post.frontMatter.thumbnailUrl}`}
+            src={`${isProd ? process.env.BASE_PATH : ""}/static/images/posts/${post.slug}${post.frontMatter.thumbnailUrl}`}
             alt=""
           />
         </div>
