@@ -6,11 +6,11 @@ import Tag from "@components/Tag";
 
 export default function Home({ posts }) {
   return (
-    <div className="px-20">
-      <div className="py-6">
+    <div className="max-w-[800px] mx-auto">
+      <div className="pt-10 pb-8">
         <Tag />
       </div>
-      <div className="max-w-[800px] mx-auto">
+      <div>
         {posts.map((post, index) => (
           <div key={index}>
             <Card post={post} />

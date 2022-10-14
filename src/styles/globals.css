@@ -5,9 +5,9 @@
 @tailwind utilities;
 
 * {
-  @apply font-['Prompt'];
+  @apply font-['Prompt'] scroll-smooth;
 }
 
 .nav-icon {
-  @apply text-2xl lg:my-8 text-center;
+  @apply text-2xl lg:my-8 text-center cursor-pointer text-black;
 }
