@@ -10,7 +10,7 @@ export default function Home({ posts }) {
       <div className="pt-10 pb-8">
         <Tag />
       </div>
-      <div>
+      <div className="pb-10 space-y-2">
         {posts.map((post, index) => (
           <div key={index}>
             <Card post={post} />
