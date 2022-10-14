@@ -21,7 +21,7 @@ const Card = ({ post }) => {
 
             <img
               className="max-w-[250px] ml-8 object-cover object-center hidden md:block lg:block"
-              src={`${process.env.NODE_ENV === "production" ? process.env.ASSETS : ""}/static/images/posts/${post.slug}${post.frontMatter.thumbnailUrl}`}
+              src={`${process.env.NODE_ENV === "production" ? process.env.ASSETS_PREFIX : ""}/static/images/posts/${post.slug}${post.frontMatter.thumbnailUrl}`}
               alt=""
             />
 
