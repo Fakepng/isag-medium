@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <div className="flex lg:flex-col lg:w-fit lg:min-h-screen p-4 lg:justify-between bg-neutral-100 fixed bottom-0 w-full border-r-[1px] border-r-neutral-200 dark:bg-neutral-900 dark:border-r-neutral-800">
       <div className="w-7 hidden lg:block">
-        <img className="w-full" src={`${process.env.NODE_ENV === "production" ? process.env.ASSETS : ""}/static/images/logo-isag.png`} alt="" />
+        <img className="w-full" src={`${process.env.NODE_ENV === "production" ? process.env.ASSETS_PREFIX : ""}/static/images/logo-isag.png`} alt="" />
       </div>
       <div className="flex lg:block w-full justify-around ">
         <div>
