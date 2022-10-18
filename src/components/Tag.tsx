@@ -2,7 +2,7 @@ import {
   MdOutlineKeyboardArrowRight,
   MdOutlineKeyboardArrowLeft,
 } from "react-icons/md";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const tagLinks = [
   "For you",
@@ -11,21 +11,25 @@ const tagLinks = [
   "Forensic",
   "Cryptography",
   "Web Technology",
-  "Cryptography",
-  "Web Technology",
-  "Cryptography",
-  "Web Technology",
-  "Cryptography",
-  "Web Technology",
-  "Cryptography",
-  "Web Technology",
+  "Cryptography1",
+  "Web Technology1",
+  "Cryptography2",
+  "Web Technology2",
+  "Cryptography3",
+  "Web Technology3",
+  "Cryptography4",
+  "Web Technology4",
 ];
 
-const Tag = () => {
-  const [count, setCount] = useState<number>(0);
+const Tag = ({ tagChange }) => {
+  const [currTag, setTag] = useState<string>("For you");
   const [scrollX, setScrollX] = useState<number>(0);
   const [scrollEnd, setScrollEnd] = useState<boolean>(false);
   const scrollElement = useRef(null);
+
+  useEffect(() => {
+    tagChange(currTag);
+  }, [currTag]);
 
   const scroll = (size: number) => {
     scrollElement.current.scrollLeft += size;
@@ -52,12 +56,14 @@ const Tag = () => {
         </button>
       )}
       <div className="overflow-hidden mx-4 flex" ref={scrollElement}>
-        {tagLinks.map((tag, index) => (
+        {tagLinks.map((tag) => (
           <div
-            onClick={() => setCount(index)}
-            key={index}
+            onClick={() => setTag(tag)}
+            key={tag}
             className={`text-base whitespace-nowrap mx-4 cursor-pointer py-1 inline-block text-neutral-400 ${
-              count === index ? "border-b-[1px] border-b-neutral-600 text-neutral-800 dark:border-b-neutral-400 dark:text-neutral-200" : ""
+              currTag === tag
+                ? "border-b-[1px] border-b-neutral-600 text-neutral-800 dark:border-b-neutral-400 dark:text-neutral-200"
+                : ""
             }`}
           >
             {tag}
